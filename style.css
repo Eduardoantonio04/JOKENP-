@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./assets/5262770.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+
+    /* display: none; */
+}
+
+.div-button {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+button {
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+
+.box-style-emoji-choice {
+    display: none;
+}
+
+.style-emoji-choice {
+    border: none;
+    font-size: 60px;
+    background: none;
+    transition: transform 1s ease;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 2.5px;
+}
+
+.you-score span {
+    color: blue;
+}
+
+.machine-score span {
+    color: #0059ff;
+}
+
+.statistc {
+    display: none;
+}
+
+
+
+/*   --->>>   PARTE 3   <<<---   */
+
+
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+
+    display: none;
+}
+
+.box-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box-result-player,
+.box-result-machine {
+    width: 45%;
+}
+
+.box-player,
+.box-machine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.style-emoji-player, .style-emoji-machine {
+    font-size: 60px;
+}
+
+.box-p-result-player,
+.box-p-result-machine {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.box-versus{
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+
+
+/*   --->>>   PARTE 3   <<<---   */
+
+
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+
+    display: none;
+}
+
+.container-3-emoji {
+    font-size: 60px;
+}
+
+.container-3-name-winner {
+    font-size: 13px;
+}

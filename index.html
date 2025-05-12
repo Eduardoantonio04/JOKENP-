@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKENPÔ</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-1">
+        <h1>JOKENPÔ</h1>
+
+        <div class="div-button">
+            <button onclick="playerChoice('pedra')">&#9994</button>
+            <button onclick="playerChoice('papel')">&#128400</button>
+            <button onclick="playerChoice('tesoura')">&#9996</button>
+        </div>
+
+        <div class="box-style-emoji-choice">
+            <p class="style-emoji-choice"></p>
+        </div>
+
+        <h2 class="you-score">SUA PONTUAÇÃO: <span id="you-score">0</span></h2>
+        <h2 class="machine-score">PONTUAÇÃO MAQUINA: <span id="machine-score">0</span></h2>
+
+        <div class="statistc">
+            <p>VITORIA</p>
+            <P>EMPATE</P>
+            <P>DERROTA</P>
+        </div>
+    </div>
+
+
+
+    <!--     PARTE 2     -->
+
+
+
+    <div class="container-2">
+        <h1 id="jo-ken-po"></h1>
+
+        <div class="box-result">
+            <div class="box-result-player">
+                <div class="box-player">
+                    <div class="box-choice-player">
+                        <p class="style-emoji-player"></p>
+                    </div>
+
+                    <div class="box-p-result-player">
+                        <p>&#128526</p>
+                        <p>player</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-versus">
+                Vs
+            </div>
+
+            <div class="box-result-machine">
+                <div class="box-machine">
+                    <div class="box-choice-machine">
+                        <p class="style-emoji-machine"></p>
+                    </div>
+
+                    <div class="box-p-result-machine">
+                        <p>&#129302</p>
+                        <p>machine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--     PARTE 3     -->
+
+
+
+    <div class="container-3">
+        <h1 class="container-3-title">RESULT</h1>
+
+        <p class="container-3-point">Mais Um Ponto Para:</p>
+
+        <P class="container-3-emoji"></P>
+
+        <p class="container-3-name-winner">VENCEDOR</p>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
