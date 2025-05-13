@@ -1,11 +1,17 @@
 
-const arrayEmoji = [
-    { stone: "&#9994" },
-    { paper: "&#128400" },
-    { scissors: "&#9996" },
-    { machine: "&#129302" },
-    { player: "&#128526" },
-]
+const LIST_EMOJI = {
+    STONE: "&#9994",
+    PAPER: "&#128400",
+    SCISSORS: "&#9996",
+    MACHINE: "&#129302",
+    PLAYER: "&#128526"
+}
+
+const LIST_CHOICE = {
+    STONE: 'pedra',
+    PAPER: 'papel',
+    SCISSORS: 'tesoura'
+}
 
 let container1 = document.querySelector(".container-1")
 let container2 = document.querySelector(".container-2")
@@ -49,7 +55,7 @@ const playerChoice = (playerChoiceValue) => {
 }
 
 const machineChoice = () => {
-    const choice = ['pedra', 'papel', 'tesoura']
+    const choice = [LIST_CHOICE.STONE, LIST_CHOICE.PAPER, LIST_CHOICE.SCISSORS]
     const choiceRandom = Math.floor(Math.random() * 3)
 
     return choice[choiceRandom]
@@ -60,9 +66,9 @@ const rulesGame = (playerChoice, machineChoice) => {
         console.log("EMPATE") //empate
         empat()
     } else if (
-        (playerChoice === 'pedra' && machineChoice === 'tesoura') ||
-        (playerChoice === 'papel' && machineChoice === 'pedra') ||
-        (playerChoice === 'tesoura' && machineChoice === 'papel')
+        (playerChoice === LIST_CHOICE.STONE && machineChoice === LIST_CHOICE.SCISSORS) ||
+        (playerChoice === LIST_CHOICE.PAPER && machineChoice === LIST_CHOICE.STONE) ||
+        (playerChoice === LIST_CHOICE.SCISSORS && machineChoice === LIST_CHOICE.PAPER)
     ) {
         console.log("VITORIA")
         winner()
@@ -90,7 +96,7 @@ const winner = () => {
     transitionWin()
     resultWinner.innerHTML = "ÓIA, VOCÊ GANHOU!"
     paragPoint.innerHTML = "2 Pontos Pra Conta.. he,he!!"
-    emojiWinner.innerHTML = "&#128526"
+    emojiWinner.innerHTML = LIST_EMOJI.PLAYER
     nameWinner.innerHTML = "PLAYER WIN"
 }
 
@@ -100,26 +106,26 @@ const defeat = () => {
     transitionDefeat()
     resultWinner.innerHTML = "CHORA NÃO, BÊBÊ!!"
     paragPoint.innerHTML = "Mais 2 Pontos!"
-    emojiWinner.innerHTML = "&#129302"
+    emojiWinner.innerHTML = LIST_EMOJI.MACHINE
     nameWinner.innerHTML = "MACHINE WIN"
 }
 
 const changeEmoji = (playerChoice, machineChoice) => {
 
     if (playerChoice === 'pedra') {
-        emojiPlayer.innerHTML = "&#9994"
+        emojiPlayer.innerHTML = LIST_EMOJI.STONE
     } else if (playerChoice === 'papel') {
-        emojiPlayer.innerHTML = "&#128400"
+        emojiPlayer.innerHTML = LIST_EMOJI.PAPER
     } else if (playerChoice === 'tesoura') {
-        emojiPlayer.innerHTML = "&#9996"
+        emojiPlayer.innerHTML = LIST_EMOJI.SCISSORS
     }
 
     if (machineChoice === 'pedra') {
-        emojiMachine.innerHTML = "&#9994"
+        emojiMachine.innerHTML = LIST_EMOJI.STONE
     } else if (machineChoice === 'papel') {
-        emojiMachine.innerHTML = "&#128400"
+        emojiMachine.innerHTML = LIST_EMOJI.PAPER
     } else if (machineChoice === 'tesoura') {
-        emojiMachine.innerHTML = "&#9996"
+        emojiMachine.innerHTML = LIST_EMOJI.SCISSORS
     }
 
     console.log(`PLAYER JOGOU "${playerChoice}" E MAQUINA JOGOU "${machineChoice}"`)
@@ -157,7 +163,7 @@ const playJokenPo = (playerChoiceValue, machine) => {
     setTimeout(() => {
         jokenpoTitle.innerHTML = "JO...KEN..."
         soundKen.play()
-    }, 9000)
+    }, 8500)
 
     setTimeout(() => {
         jokenpoTitle.innerHTML = "JO...KEN...PÔ!"
@@ -229,12 +235,12 @@ const buttonChoice = (buttonClicked) => {
 
     if (buttonClicked === 'pedra') {
         boxStyleEmojiChoiceButton.style.display = "flex"
-        styleEmojiChoiceButton.innerHTML = "&#9994"
+        styleEmojiChoiceButton.innerHTML = LIST_EMOJI.STONE
     } else if (buttonClicked === 'papel') {
         boxStyleEmojiChoiceButton.style.display = "flex"
-        styleEmojiChoiceButton.innerHTML = "&#128400"
+        styleEmojiChoiceButton.innerHTML = LIST_EMOJI.PAPER
     } else if (buttonClicked === 'tesoura') {
         boxStyleEmojiChoiceButton.style.display = "flex"
-        styleEmojiChoiceButton.innerHTML = "&#9996"
+        styleEmojiChoiceButton.innerHTML = LIST_EMOJI.SCISSORS
     }
 }
